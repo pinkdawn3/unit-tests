@@ -21,6 +21,12 @@ class TestCalc(unittest.TestCase):
 
         # param: result, function, parameters
         self.assertRaises(ValueError, calc.divide, 10, 0)
+
+        # or it can also be done as...
+        with self.assertRaises(ValueError):
+            calc.divide(10, 0)
+
+
         
 
 
